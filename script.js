@@ -319,3 +319,28 @@ function proceedToCheckout() {
     // Proceed only when items exist
     window.location.href = "order.html";
 }
+// =========================
+// CLEAR CART
+// =========================
+
+function clearCart() {
+    localStorage.removeItem("cart");
+
+    // Reset cart items and total
+    const cartItems = document.getElementById("cartItems");
+    const cartTotal = document.getElementById("cartTotal");
+    const message = document.getElementById("checkoutMessage");
+
+    if (cartItems) {
+        cartItems.innerHTML = "<p>Your cart is empty! ☕</p>";
+    }
+
+    if (cartTotal) {
+        cartTotal.textContent = "₹0";
+    }
+
+    if (message) {
+        message.textContent = "Your cart has been cleared!";
+        message.style.color = "#4b2e2e";
+    }
+}
