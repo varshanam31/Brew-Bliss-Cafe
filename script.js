@@ -1,4 +1,3 @@
-```javascript
 // =========================
 // MENU DATA
 // =========================
@@ -283,4 +282,3 @@ if (document.getElementById("orderForm")) {
     orderForm.reset();
   });
 }
-```
