@@ -53,4 +53,34 @@ form button { background:#ff914d; color:#fff; border:none; font-weight:600; curs
 form button:hover { background:#e67b30; }
 
 /* Footer */
-footer { text-align:center; padding:1rem; background:#4b2e2e; color:#fff; margin-top:2rem; }
+footer {
+    text-align: center;
+    padding: 24px 16px;
+    background: #4b2e2e;
+    color: #ffffff;
+    margin-top: 40px;
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #ffb17e;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive footer */
+@media (max-width: 600px) {
+    footer {
+        padding: 20px 12px;
+        font-size: 13px;
+    }
+}
