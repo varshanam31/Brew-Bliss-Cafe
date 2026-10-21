@@ -299,15 +299,15 @@ function proceedToCheckout() {
 
     window.location.href = "order.html";
 }
-// =========================
-// PROCEED TO CHECKOUT
-// =========================
+
+/* =========================
+   PROCEED TO CHECKOUT
+========================= */
 
 function proceedToCheckout() {
     const cart = getCart();
     const message = document.getElementById("checkoutMessage");
 
-    // Block checkout if the cart is empty
     if (cart.length === 0) {
         if (message) {
             message.textContent =
@@ -316,23 +316,28 @@ function proceedToCheckout() {
         return;
     }
 
-    // Proceed only when items exist
     window.location.href = "order.html";
 }
-// =========================
-// CLEAR CART
-// =========================
+
+
+/* =========================
+   CLEAR CART
+========================= */
 
 function clearCart() {
-    localStorage.removeItem("cart");
+    // Clear saved cart
+    saveCart([]);
 
-    // Reset cart items and total
+    // Refresh cart display
     const cartItems = document.getElementById("cartItems");
     const cartTotal = document.getElementById("cartTotal");
     const message = document.getElementById("checkoutMessage");
 
     if (cartItems) {
-        cartItems.innerHTML = "<p>Your cart is empty! ☕</p>";
+        cartItems.innerHTML = "";
+        const emptyMessage = document.createElement("p");
+        emptyMessage.textContent = "Your cart is empty. Add some coffee! ☕";
+        cartItems.appendChild(emptyMessage);
     }
 
     if (cartTotal) {
@@ -342,5 +347,12 @@ function clearCart() {
     if (message) {
         message.textContent = "Your cart has been cleared!";
         message.style.color = "#4b2e2e";
+    }
+
+    // Reset cart count if present
+    const cartCount = document.getElementById("cartCount");
+
+    if (cartCount) {
+        cartCount.textContent = "0";
     }
 }
