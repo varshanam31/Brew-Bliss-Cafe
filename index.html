@@ -1,56 +1,76 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cafe - Home</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4b2e2e">
+    <title>Varshana's Cafe Bliss ☕</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Varshana's Cafe Bliss ☕</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="order.html">Order</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header>
+        <h1>Varshana's Cafe Bliss ☕</h1>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Freshly Brewed Happiness</h2>
-      <p>Your daily dose of coffee and treats, just a click away.</p>
-      <a href="#menu"><button class="btn">Explore Menu</button></a>
-    </div>
-  </section>
+        <nav>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="order.html">Order</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Menu -->
-  <section id="menu" class="menu">
-    <h2>Our Menu</h2>
-    <div class="tabs">
-      <div class="tab active" data-category="coffee">Coffee</div>
-      <div class="tab" data-category="snacks">Snacks</div>
-      <div class="tab" data-category="specials">Specials</div>
-    </div>
-    <div class="menu-grid" id="menuGrid"></div>
-  </section>
+    <!-- Main Content -->
+    <main class="page-content">
 
-  <!-- Floating Cart -->
-  <a href="cart.html" class="cart">🛒 Cart (<span id="cartCount">0</span>)</a>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Freshly Brewed Happiness</h2>
+                <p>Your daily dose of coffee and treats, just a click away.</p>
+                <a href="#menu" class="btn">Explore Menu</a>
+            </div>
+        </section>
 
-  <!-- Footer -->
-  
-<footer>
-    <p>© 2026 Brew Bliss Café | Crafted with ❤️</p>
-    <p>Freshly brewed happiness, in every cup. ☕</p>
-</footer>
+        <!-- Menu -->
+        <section id="menu" class="menu">
+            <h2>Our Menu</h2>
 
+            <div class="tabs">
+                <button class="tab active" type="button" data-category="coffee">
+                    Coffee
+                </button>
 
-  <script src="script.js"></script>
+                <button class="tab" type="button" data-category="snacks">
+                    Snacks
+                </button>
+
+                <button class="tab" type="button" data-category="specials">
+                    Specials
+                </button>
+            </div>
+
+            <div class="menu-grid" id="menuGrid"></div>
+        </section>
+
+    </main>
+
+    <!-- Floating Cart -->
+    <a href="cart.html" class="cart">
+        🛒 Cart (<span id="cartCount">0</span>)
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Brew Bliss Café | Crafted with ❤️</p>
+        <p>Freshly brewed happiness, in every cup. ☕</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
 </body>
 </html>
