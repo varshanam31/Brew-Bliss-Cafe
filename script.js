@@ -282,3 +282,20 @@ if (document.getElementById("orderForm")) {
     orderForm.reset();
   });
 }
+// =========================
+// CHECKOUT VALIDATION
+// =========================
+
+function proceedToCheckout() {
+    const cart = getCart();
+    const message = document.getElementById("checkoutMessage");
+
+    if (cart.length === 0) {
+        message.textContent =
+            "☕ Your cart is empty! Please add a product before checkout.";
+
+        return;
+    }
+
+    window.location.href = "order.html";
+}
