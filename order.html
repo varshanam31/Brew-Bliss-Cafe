@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brew Bliss Coffee - Order</title>
+  <title>Brew Bliss Café - Order</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,24 +20,56 @@
     </nav>
   </header>
 
-  <!-- Order Form -->
-  <section class="order">
-    <h2>Place Your Order</h2>
-    <form id="orderForm">
-      <input type="text" placeholder="Your Name" required>
-      <input type="text" placeholder="Address" required>
-      <input type="tel" placeholder="Phone Number" required>
-      <button type="submit" class="btn">Confirm Order</button>
-    </form>
-    <p id="orderMessage"></p>
-  </section>
+  <!-- Main Content -->
+  <main class="page-content">
+    <section class="order">
+      <h2>Place Your Order</h2>
 
- 
-<footer>
+      <form id="orderForm">
+        <input
+          type="text"
+          id="customerName"
+          name="customerName"
+          placeholder="Your Name"
+          autocomplete="name"
+          minlength="2"
+          required
+        >
+
+        <input
+          type="text"
+          id="customerAddress"
+          name="customerAddress"
+          placeholder="Delivery Address"
+          autocomplete="street-address"
+          required
+        >
+
+        <input
+          type="tel"
+          id="customerPhone"
+          name="customerPhone"
+          placeholder="Phone Number"
+          autocomplete="tel"
+          pattern="[0-9]{10}"
+          maxlength="10"
+          inputmode="numeric"
+          title="Enter a 10-digit phone number"
+          required
+        >
+
+        <button type="submit" class="btn">Confirm Order</button>
+      </form>
+
+      <p id="orderMessage" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
     <p>© 2026 Brew Bliss Café | Crafted with ❤️</p>
     <p>Freshly brewed happiness, in every cup. ☕</p>
-</footer>
-
+  </footer>
 
   <script src="script.js"></script>
 </body>
