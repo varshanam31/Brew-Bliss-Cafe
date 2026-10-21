@@ -1,40 +1,55 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brew Bliss Coffee - Cart</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4b2e2e">
+    <title>Brew Bliss Café - Cart</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Brew Bliss ☕</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cart.html" class="active">Cart</a></li>
-        <li><a href="order.html">Order</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header>
+        <h1>Brew Bliss ☕</h1>
 
-  <!-- Cart Section -->
-  <section class="cart-page">
-    <h2>Your Cart</h2>
-    <div id="cartItems"></div>
-    <p class="total">Total: <span id="cartTotal">₹0</span></p>
-    <a href="order.html"><button class="btn">Proceed to Checkout</button></a>
-  </section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html" class="active">Cart</a></li>
+                <li><a href="order.html">Order</a></li>
+            </ul>
+        </nav>
+    </header>
 
- 
-<footer>
-    <p>© 2026 Brew Bliss Café | Crafted with ❤️</p>
-    <p>Freshly brewed happiness, in every cup. ☕</p>
-</footer>
+    <!-- Main Content: expands to push footer down -->
+    <main class="page-content">
 
+        <!-- Cart Section -->
+        <section class="cart-page">
+            <h2>Your Cart</h2>
 
-  <script src="script.js"></script>
+            <div id="cartItems"></div>
+
+            <p class="total">
+                Total: <span id="cartTotal">₹0</span>
+            </p>
+
+            <a href="order.html" class="btn">
+                Proceed to Checkout
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Brew Bliss Café | Crafted with ❤️</p>
+        <p>Freshly brewed happiness, in every cup. ☕</p>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
