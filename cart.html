@@ -3,35 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brew Bliss Coffee - Cart</title>
+  <meta name="theme-color" content="#4b302d">
+  <title>Your Cart | Brew Bliss Café</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <h1>Brew Bliss ☕</h1>
-    <nav>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="cart.html" class="active">Cart</a></li>
-        <li><a href="order.html">Order</a></li>
-      </ul>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-icon">☕</span><span>Brew Bliss <small>CAFÉ</small></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="index.html#menu">Menu</a>
+      <a class="active" href="cart.html">Cart <span class="nav-count" id="navCartCount">0</span></a>
+      <a href="order.html">Checkout</a><a href="admin.html">Admin</a>
     </nav>
   </header>
-
-  <!-- Cart Section -->
-  <section class="cart-page">
-    <h2>Your Cart</h2>
-    <div id="cartItems"></div>
-    <p class="total">Total: <span id="cartTotal">₹0</span></p>
-    <a href="order.html"><button class="btn">Proceed to Checkout</button></a>
-  </section>
-
-  <footer>
-    <p>© 2025 Brew Bliss Coffee | Crafted with ❤️</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <main class="page-wrap">
+    <div class="page-heading"><p class="eyebrow">YOUR SELECTION</p><h1>Your <em>cart</em></h1><p>Review your café favourites before checkout.</p></div>
+    <div class="cart-layout">
+      <section class="panel cart-panel"><div class="panel-heading"><h2>Cart items</h2><a href="index.html#menu" class="text-link">← Continue shopping</a></div>
+        <div id="cartItems"></div>
+      </section>
+      <aside class="panel summary-panel"><h2>Order summary</h2><div class="summary-line"><span>Items subtotal</span><strong id="cartSubtotal">₹0</strong></div><div class="summary-line"><span>Delivery</span><strong id="cartDelivery">₹0</strong></div><div class="summary-line summary-total"><span>Total</span><strong id="cartTotal">₹0</strong></div><p class="small-note">Demo checkout only. No payment is collected.</p><a class="btn btn-primary btn-full" id="checkoutLink" href="order.html">Continue to checkout →</a></aside>
+    </div>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="index.html"><span class="brand-icon">☕</span><span>Brew Bliss <small>CAFÉ</small></span></a><small>© <span id="year"></span> Brew Bliss Café. Made with ♥</small></footer>
 </body>
 </html>

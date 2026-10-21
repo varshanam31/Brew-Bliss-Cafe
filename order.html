@@ -3,39 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brew Bliss Coffee - Order</title>
+  <meta name="theme-color" content="#4b302d">
+  <title>Checkout | Brew Bliss Café</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <h1>Brew Bliss ☕</h1>
-    <nav>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="order.html" class="active">Order</a></li>
-      </ul>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-icon">☕</span><span>Brew Bliss <small>CAFÉ</small></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="index.html#menu">Menu</a><a href="cart.html">Cart <span class="nav-count" id="navCartCount">0</span></a><a class="active" href="order.html">Checkout</a><a href="admin.html">Admin</a>
     </nav>
   </header>
-
-  <!-- Order Form -->
-  <section class="order">
-    <h2>Place Your Order</h2>
-    <form id="orderForm">
-      <input type="text" placeholder="Your Name" required>
-      <input type="text" placeholder="Address" required>
-      <input type="tel" placeholder="Phone Number" required>
-      <button type="submit" class="btn">Confirm Order</button>
-    </form>
-    <p id="orderMessage"></p>
-  </section>
-
-  <footer>
-    <p>© 2025 Brew Bliss Coffee | Crafted with ❤️</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <main class="page-wrap">
+    <div class="page-heading"><p class="eyebrow">ALMOST THERE</p><h1>Make it a <em>happy order</em></h1><p>Enter your details and confirm your demo order.</p></div>
+    <div class="checkout-layout">
+      <section class="panel checkout-panel"><h2>Delivery details</h2>
+        <form id="orderForm">
+          <label for="customerName">Full name</label><input id="customerName" name="customerName" type="text" placeholder="Your name" autocomplete="name" minlength="2" required>
+          <label for="customerPhone">Phone number</label><input id="customerPhone" name="customerPhone" type="tel" placeholder="10-digit mobile number" autocomplete="tel" inputmode="numeric" pattern="[6-9][0-9]{9}" title="Enter a valid 10-digit Indian mobile number" required>
+          <label for="customerAddress">Delivery address</label><textarea id="customerAddress" name="customerAddress" placeholder="House number, street, area..." autocomplete="street-address" minlength="8" rows="3" required></textarea>
+          <label for="customerNotes">Order notes <span class="optional">(optional)</span></label><textarea id="customerNotes" name="customerNotes" placeholder="Any special instructions?" rows="2"></textarea>
+          <p class="small-note">This front-end demo stores the order only in this browser. It does not contact a café or process payment.</p>
+          <button type="submit" class="btn btn-primary btn-full">Confirm demo order →</button>
+          <p id="orderMessage" class="form-message" role="status"></p>
+        </form>
+      </section>
+      <aside class="panel summary-panel"><h2>Your order</h2><div id="checkoutItems" class="checkout-items"></div><div class="summary-line"><span>Subtotal</span><strong id="checkoutSubtotal">₹0</strong></div><div class="summary-line"><span>Delivery</span><strong id="checkoutDelivery">₹0</strong></div><div class="summary-line summary-total"><span>Total</span><strong id="checkoutTotal">₹0</strong></div><a href="cart.html" class="text-link">Edit cart</a></aside>
+    </div>
+    <section id="confirmationPanel" class="panel confirmation-panel hidden" aria-live="polite"></section>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="index.html"><span class="brand-icon">☕</span><span>Brew Bliss <small>CAFÉ</small></span></a><small>© <span id="year"></span> Brew Bliss Café. Made with ♥</small></footer>
 </body>
 </html>
