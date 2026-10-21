@@ -495,3 +495,22 @@ footer a:hover {
         font-size: 14px;
     }
 }
+/* Clear Cart Button */
+.clear-btn {
+    display: inline-block;
+    margin: 12px 8px 0;
+    padding: 12px 24px;
+    background: #fff;
+    color: #4b2e2e;
+    border: 2px solid #4b2e2e;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.clear-btn:hover {
+    background: #4b2e2e;
+    color: #fff;
+}
