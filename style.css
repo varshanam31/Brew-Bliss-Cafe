@@ -84,3 +84,34 @@ footer a:hover {
         font-size: 13px;
     }
 }
+
+/* Keep footer at the bottom of the screen */
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body > section,
+body > main,
+.cart-page,
+.order {
+    flex: 1;
+}
+
+/* Footer stays at the bottom */
+footer {
+    width: 100%;
+    margin-top: auto;
+    flex-shrink: 0;
+    text-align: center;
+    padding: 24px 16px;
+    background: #4b2e2e;
+    color: #fff;
+}
