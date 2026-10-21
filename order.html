@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew Bliss Coffee - Order</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Brew Bliss ☕</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="order.html" class="active">Order</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Order Form -->
+  <section class="order">
+    <h2>Place Your Order</h2>
+    <form id="orderForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="text" placeholder="Address" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <button type="submit" class="btn">Confirm Order</button>
+    </form>
+    <p id="orderMessage"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Brew Bliss Coffee | Crafted with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
