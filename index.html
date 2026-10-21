@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Varshana's Cafe Bliss ☕</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="order.html">Order</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Freshly Brewed Happiness</h2>
+      <p>Your daily dose of coffee and treats, just a click away.</p>
+      <a href="#menu"><button class="btn">Explore Menu</button></a>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+    <div class="tabs">
+      <div class="tab active" data-category="coffee">Coffee</div>
+      <div class="tab" data-category="snacks">Snacks</div>
+      <div class="tab" data-category="specials">Specials</div>
+    </div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </section>
+
+  <!-- Floating Cart -->
+  <a href="cart.html" class="cart">🛒 Cart (<span id="cartCount">0</span>)</a>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Brew Bliss Coffee | Crafted with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
