@@ -299,3 +299,23 @@ function proceedToCheckout() {
 
     window.location.href = "order.html";
 }
+// =========================
+// PROCEED TO CHECKOUT
+// =========================
+
+function proceedToCheckout() {
+    const cart = getCart();
+    const message = document.getElementById("checkoutMessage");
+
+    // Block checkout if the cart is empty
+    if (cart.length === 0) {
+        if (message) {
+            message.textContent =
+                "☕ Your cart is empty! Please add a product first.";
+        }
+        return;
+    }
+
+    // Proceed only when items exist
+    window.location.href = "order.html";
+}
